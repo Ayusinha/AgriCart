@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "914508575335",
+    "firebase_url": "https://ecomlogin-6dbe5.firebaseio.com",
+    "project_id": "ecomlogin-6dbe5",
+    "storage_bucket": "ecomlogin-6dbe5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:914508575335:android:19d1a1da99d03542ab9ac2",
+        "android_client_info": {
+          "package_name": "agricartcdkglobal.ecom"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "914508575335-t6kcdmiislm6ivpb9jsfhh2q2n3qdv51.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDjrWWovvlwPZ7DTb-CL2Tk9hDwC8TO33c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "914508575335-t6kcdmiislm6ivpb9jsfhh2q2n3qdv51.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:914508575335:android:341169e87c97d64cab9ac2",
+        "android_client_info": {
+          "package_name": "agricartcdkglobal.ecomlogin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "914508575335-t6kcdmiislm6ivpb9jsfhh2q2n3qdv51.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDjrWWovvlwPZ7DTb-CL2Tk9hDwC8TO33c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "914508575335-t6kcdmiislm6ivpb9jsfhh2q2n3qdv51.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
