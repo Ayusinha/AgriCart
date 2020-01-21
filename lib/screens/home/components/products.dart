@@ -10,7 +10,7 @@ class Products extends StatefulWidget {
 class _ProductsState extends State<Products> {
   var products_list = [
     {
-      "name": "Gehu",
+      "name": "Wheat",
       "farmer": 'Nandkishor',
       "contact": '+919999999990',
       "picture": "images/products/c1.jpg",
@@ -18,12 +18,36 @@ class _ProductsState extends State<Products> {
       "address": "Hatpipliya"
     },
     {
-      "name": "Pyaaj",
-      "farmer": 'Nandkishor2',
+      "name": "Onion",
+      "farmer": 'Ram',
       "contact": '+919999999991',
       "picture": "images/products/c2.jpg",
       "price": "120₹/Kg",
       "address": "Narwar"
+    },
+    {
+      "name": "Eggs",
+      "farmer": 'Sanjay',
+      "contact": '+919999999992',
+      "picture": "images/products/egg.jpg",
+      "price": "36₹/dozen",
+      "address": "Bhopal"
+    },
+    {
+      "name": "Rice",
+      "farmer": 'Nandkishor',
+      "contact": '+919999999993',
+      "picture": "images/products/rice.jpg",
+      "price": "70₹/Kg",
+      "address": "Dewas"
+    },
+    {
+      "name": "Apples",
+      "farmer": 'Nandkishor',
+      "contact": '+919999999994',
+      "picture": "images/products/apples.jpg",
+      "price": "30₹/Kg",
+      "address": "Hatpipliya"
     },
   ];
   @override
@@ -75,16 +99,19 @@ class Single_prod extends StatelessWidget {
                 product_farmer_address: prod_farmer_address,
                 product_farmer_contact: prod_farmer_contact,
               ))),
-          child: GridTile(
-            footer: Container(
-              color: Colors.white70,
-              child: ListTile(
-                leading: Text(prod_name, style: TextStyle(fontWeight: FontWeight.bold),),
-                title: Text("${prod_price}", style: TextStyle(fontWeight: FontWeight.w800, color: Color(0xFF388E3C)), textAlign: TextAlign.right,),
+          child: Padding(
+            padding: const EdgeInsets.all(5.0),
+            child: GridTile(
+              footer: Container(
+                color: Colors.white70,
+                child: ListTile(
+                  leading: Text(prod_name, style: TextStyle(fontWeight: FontWeight.bold),),
+                  title: Text("${prod_price}", style: TextStyle(fontWeight: FontWeight.w800, color: Color(0xFF388E3C)), textAlign: TextAlign.right,),
+                ),
               ),
-            ),
-          child: Image.asset(prod_picture,
-          fit: BoxFit.cover,),),
+            child: Image.asset(prod_picture,
+            fit: BoxFit.cover,),),
+          ),
         )
       )),
     );

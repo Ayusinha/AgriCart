@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:carousel_pro/carousel_pro.dart';
 import 'package:ecom/screens/home/components/products.dart';
 import 'package:ecom/screens/home/components/horizontal_list_view.dart';
+import 'package:ecom/screens/home/pages/cart.dart';
 
 
 class Home extends StatelessWidget {
@@ -15,36 +16,39 @@ class Home extends StatelessWidget {
       child: new Carousel(
         boxFit: BoxFit.cover,
         images: [
-          AssetImage('images/c1.jpg'),
-          AssetImage('images/m1.jpeg'),
-          AssetImage('images/IMG_1266.JPG'),
+          AssetImage('images/m4.jpg'),
+          AssetImage('images/m3.jpg'),
+          AssetImage('images/c21.jpg'),
         ],
         autoplay: true,
+
         dotSize: 4.0,
         dotBgColor: Colors.transparent,
         indicatorBgPadding: 4.0,
         animationCurve: Curves.fastOutSlowIn,
-        animationDuration: Duration(milliseconds: 2000),
+        animationDuration: Duration(milliseconds: 1000),
       ),
     );
     return Scaffold(
-      backgroundColor: Colors.blueAccent[100],
-      appBar: AppBar(
+      appBar: new AppBar(
+        elevation: 20.0,
         title: Text('AgriCart'),
-        elevation: 0.0,
         actions: <Widget>[
           new IconButton(icon: Icon(Icons.search, color: Colors.white), onPressed: (){}),
-          new IconButton(icon: Icon(Icons.shopping_cart, color: Colors.white), onPressed: (){}),
+          new IconButton(icon: Icon(Icons.shopping_cart, color: Colors.white), onPressed: (){
+            Navigator.push(context, MaterialPageRoute(builder: (context) => new Cart()));
+          }),
           FlatButton.icon(
               onPressed: () async {
                 await _auth.signOut();
               },
-              icon: Icon(Icons.person),
-              label: Text('Logout')),
+              icon: Icon(Icons.person,color: Colors.white,),
+              label: Text('Logout'),
+              color: Colors.white,
+          ),
         ],
         backgroundColor: Color(0xFF388E3C),
       ),
-
       drawer: new Drawer(
           child: ListView(
             children: <Widget>[
@@ -53,7 +57,7 @@ class Home extends StatelessWidget {
                 color:Colors.green,
                 child: new UserAccountsDrawerHeader(
                   accountName: Text('Patel Abhishek'),
-                  accountEmail: Text('patelabhi@gmail.com'),
+                  accountEmail: Text('patel@gmail.com'),
                   currentAccountPicture: GestureDetector(
                     child: CircleAvatar(
                       backgroundColor: Colors.white,
@@ -91,25 +95,22 @@ class Home extends StatelessWidget {
               ),
 
               InkWell(
-                  onTap: (){},
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => new Cart()));
+                  },
                   child: ListTile(
-                      title: Text('Categories'),
-                      leading: Icon(Icons.dashboard, color: Color(0xFF388E3C),)
+                      title: Text('My Shopping Cart'),
+                      leading: Icon(Icons.shopping_cart, color: Color(0xFF388E3C),)
                   )
               ),
 
               Divider(),
 
-              InkWell(
-                  onTap: (){},
-                  child: ListTile(
-                      title: Text('Settings'),
-                      leading: Icon(Icons.settings, color: Color(0xFF388E3C),)
-                  )
-              ),
 
               InkWell(
-                  onTap: (){},
+                  onTap: (){
+
+                  },
                   child: ListTile(
                       title: Text('About'),
                       leading: Icon(Icons.help, color: Color(0xFF388E3C),)

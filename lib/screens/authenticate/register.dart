@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:ecom/services/auth.dart';
 
+enum Character { Farmer, Buyer }
+
 class Register extends StatefulWidget {
 
   final Function toggleView;
@@ -14,10 +16,14 @@ class _RegisterState extends State<Register> {
 
   final AuthService _auth = AuthService();
   final _formKey= GlobalKey<FormState>();
+
   //text fiels state
   String email= '';
   String password='';
   String error='';
+  String phone='';
+  Character _character = Character.Farmer;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -56,6 +62,31 @@ class _RegisterState extends State<Register> {
                 onChanged: (val) {
                   setState(() => password = val);
                 },
+              ),
+              SizedBox(height: 20.0),
+              TextFormField(
+                // The validator receives the text that the user has entered.
+                validator: (value) => value.length <10 ? 'Enter a Valid 10 digit Mobile number' : null,
+                onChanged: (value){
+                  setState(() => phone = value);
+                },
+              ),
+              SizedBox(height: 20.0),
+              Column(
+                children: <Widget>[
+                  RadioListTile<Character>(
+                    title: const Text('Lafayette'),
+                    value: Character.Farmer,
+                    groupValue: _character,
+                    onChanged: (Character value) { setState(() { _character = value; }); },
+                  ),
+                  RadioListTile<Character>(
+                    title: const Text('Thomas Jefferson'),
+                    value: Character.Buyer,
+                    groupValue: _character,
+                    onChanged: (Character value) { setState(() { _character = value; }); },
+                  ),
+                ],
               ),
               SizedBox(height: 20.0),
               RaisedButton(

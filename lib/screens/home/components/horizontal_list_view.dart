@@ -4,6 +4,7 @@ class HorizontalListView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      decoration: BoxDecoration(color: Colors.white70),
       alignment: Alignment.center,
       height: 100.0,
       child: ListView(
@@ -22,8 +23,8 @@ class HorizontalListView extends StatelessWidget {
             image_caption: 'Poultry',
           ),
           Category(
-            image_location: 'images/cats/crop.png',
-            image_caption: 'Crops',
+            image_location: 'images/cats/fruits.png',
+            image_caption: 'Fruits',
           ),
         ],
       )
@@ -33,10 +34,12 @@ class HorizontalListView extends StatelessWidget {
 class Category extends StatelessWidget {
   final String image_location;
   final String image_caption;
+  final String image_route;
 
   Category({
     this.image_caption,
     this.image_location,
+    this.image_route,
   });
   @override
   Widget build(BuildContext context) {

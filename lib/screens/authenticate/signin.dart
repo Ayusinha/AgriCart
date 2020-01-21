@@ -26,7 +26,7 @@ class _SignInState extends State<SignIn> {
       backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Colors.green,
-        elevation: 0.2,
+        elevation: 0.0,
         title: Text('Sign in to Agri Cart App'),
         actions: <Widget>[
           FlatButton.icon(
